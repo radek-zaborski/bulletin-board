@@ -1,52 +1,40 @@
 @import '../../../styles/settings.scss';
 
 .component {
-   width: 300px;
-    height: 30px;
-  display: inline-block;
-    padding: 0 px;
+  margin-bottom: 30px;
+
   .appMenu {
 
-    margin: 30px 0;
-    height: 120px;
-    position: static;
-    min-width: 80vw;
-    width: auto;
+    max-width: 80vw;
+    margin: 40px 10vw;
     background: #45315a;
     border-radius: 30px;
-    display: inline-block;
 
-  }
 
-  .firstPin, .secondPin {
-    margin-top: -15px;
-    padding-left: 15px;
-    width: 50%;
-    max-height: 30px;
-    display: inline-block;
-    img {
-      width: 30px;
+    .toolbar {
+      padding: 0;
+
+    .title {
+
+
+      text-align: center;
+
+      padding-left: 35px;
+      text-shadow: 3px 3px 12px rgb(171, 179, 167);
+
+    a {
+      text-decoration: none;
+      color: white;
+      display: inline;
     }
   }
-
-  .secondPin {
-    text-align: end;
-    padding-right: 15px;
-  }
-  .title {
-    display: inline-block;
-    width: 60%;
-    text-align: center;
-    margin: 0 auto;
-    padding-left: 35px;
-    text-shadow: 3px 3px 12px rgb(171, 179, 167);
-  }
+}
 
   .buttonLogin {
-    margin-left: 10px;
+    margin-left: 35vw;
     border-radius:  10px  35px 10px 35px ;
   }
-
+}
 }
 // .root {
 // }

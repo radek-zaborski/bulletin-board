@@ -1,6 +1,12 @@
 /* selectors */
 export const getAll = ({posts}) => posts.data;
 
+export const getPost = ({ posts }, postId) => {
+  const filterPost = posts.data.filter((post) => post.id === parseInt(postId));
+
+  return filterPost.length ? filterPost[0] : { error: true };
+};
+
 /* action name creator */
 const reducerName = 'posts';
 const createActionName = name => `app/${reducerName}/${name}`;

@@ -10,7 +10,7 @@ import styles from './NotFound.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>NotFound</h2>
+    <img className={styles.imageInfo} src={require('./notFound.png')} alt=''/>
     {children}
   </div>
 );

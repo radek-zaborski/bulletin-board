@@ -3,11 +3,14 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { initialState } from './initialState';
+
+import  {reducer as userReducer} from './userRedux';
 import { reducer as postsReducer } from './postsRedux';
 
 // define reducers
 const reducers = {
   posts: postsReducer,
+  user: userReducer,
 };
 
 // add blank reducers for initial state properties without reducers

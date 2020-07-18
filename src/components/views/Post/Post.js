@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
+import { connect } from 'react-redux';
+import { getAll, getPost } from '../../../redux/postsRedux.js';
 
 import styles from './Post.module.scss';
 

@@ -14,20 +14,15 @@ import Button from '@material-ui/core/Button';
 import styles from './Header.module.scss';
 
 const Component = ({className, children}) => (
-  <div className={clsx(className,styles.component, styles.root)}>
+  <div className={clsx(className, styles.component)}>
     <AppBar className={styles.appMenu}>
-      <div className={styles.firstPin}>
-        <img src={ require('./pin.png')}alt=''/>
-      </div>
-      <div className={styles.secondPin}>
-        <img src={ require('./pin.png')}alt=''/>
-      </div>
-      <Toolbar>
+
+      <Toolbar className={styles.toolbar}>
 
         <Typography variant="h4" className={styles.title}>
-            Bulletin Board
+           <a href='/' className={styles.title}> Bulletin Board</a>
         </Typography>
-        <Button variant="contained" className={styles.buttonLogin} color="primary" href="#contained-buttons">
+        <Button variant="contained" href="https://google.com" className={styles.buttonLogin} color="primary">
           Login
         </Button>
       </Toolbar>

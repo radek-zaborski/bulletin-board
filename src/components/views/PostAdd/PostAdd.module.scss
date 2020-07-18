@@ -1,4 +1,23 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+ .component {
+   margin-top: 50px;
+   width: 500px;
+   height: 800px;
+   padding: 90px 60px 0 30px ;
+  display: inline-block;
+  background-image: url('./emptyPost.png');
+  background-repeat: no-repeat;
+
+  .inputTexField {
+    max-width: 400px;
+    height: auto;
+    display: inline-block;
+
+    .textField{
+      width: 400px;
+      height: 70px;
+      display: inline-block;
+    }
+  }
+  }
