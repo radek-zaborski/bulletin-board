@@ -1,4 +1,36 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.component {
+
+  margin-top: 50px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: auto;
+  padding: 90px 60px 30px 30px ;
+  display: inline-block;
+  background-image: url('./emptyPost.png');
+  background-repeat: no-repeat;
+
+  .titleField {
+    width: 70%;
+  }
+
+  .priceField {
+    width: 30%;
+    margin-bottom: 30px;
+  }
+
+  .contentField {
+    width: 80%;
+  }
+
+  .emailField {
+    margin-bottom: 30px;
+  }
+
+  .sendButton {
+
+    margin-left: 30%;
+  }
+}

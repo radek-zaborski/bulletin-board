@@ -1,4 +1,30 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.component {
+  margin: 0 auto;
+  width: 45vh;
+  height: 600px;
+  background-image: url('./emptyPost.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .title {
+    padding-top: 20px;
+    width: 90%;
+    text-align: center;
+  }
+
+  .content, .price, .contact, .date {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .buttonEdit {
+    margin-top: 30px;
+    left: 50%;
+    transform: translateX(-55%);
+  }
+
+}

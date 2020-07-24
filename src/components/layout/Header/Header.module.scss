@@ -1,25 +1,21 @@
 @import '../../../styles/settings.scss';
 
-.component {
-  margin-bottom: 30px;
-
   .appMenu {
-
-    max-width: 80vw;
-    margin: 40px 10vw;
+    width: 70vw;
+    margin: 40px 15vw;
     background: #45315a;
     border-radius: 30px;
 
-
     .toolbar {
       padding: 0;
-
+      display: inline-flex;
+      justify-content: space-around;
     .title {
 
-
+      font-size: 20px;
       text-align: center;
 
-      padding-left: 35px;
+
       text-shadow: 3px 3px 12px rgb(171, 179, 167);
 
     a {
@@ -31,10 +27,11 @@
 }
 
   .buttonLogin {
-    margin-left: 35vw;
+   margin: 3px 0;
     border-radius:  10px  35px 10px 35px ;
+
   }
 }
-}
+
 // .root {
 // }

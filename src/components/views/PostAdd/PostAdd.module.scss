@@ -1,23 +1,36 @@
 @import '../../../styles/settings.scss';
 
- .component {
-   margin-top: 50px;
-   width: 500px;
-   height: 800px;
-   padding: 90px 60px 0 30px ;
+.component {
+
+  margin-top: 50px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: auto;
+  padding: 90px 60px 30px 30px ;
   display: inline-block;
   background-image: url('./emptyPost.png');
   background-repeat: no-repeat;
 
-  .inputTexField {
-    max-width: 400px;
-    height: auto;
-    display: inline-block;
+  .titleField {
+    width: 70%;
+  }
 
-    .textField{
-      width: 400px;
-      height: 70px;
-      display: inline-block;
-    }
+  .priceField {
+    width: 30%;
+    margin-bottom: 30px;
   }
+
+  .contentField {
+    width: 80%;
   }
+
+  .emailField {
+    margin-bottom: 30px;
+  }
+
+  .sendButton {
+
+    margin-left: 30%;
+  }
+}

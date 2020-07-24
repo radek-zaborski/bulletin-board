@@ -7,6 +7,7 @@ import { CssBaseline } from '@material-ui/core';
 
 import { store } from './redux/store';
 
+import {MyPosts} from './components/views/MyPosts/MyPosts';
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
 import { Post } from './components/views/Post/Post';
@@ -29,6 +30,7 @@ const App = () => (
           <MainLayout>
             <Switch>
               <Route exact path='/' component={Homepage} />
+              <Route exact path='/myPosts' component={MyPosts} />
               <Route exact path='/post/add' component={PostAdd} />
               <Route exact path='/post/:id' component={Post} />
               <Route exact path='/post/:id/edit' component={PostEdit} />

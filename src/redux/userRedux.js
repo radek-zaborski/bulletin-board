@@ -3,24 +3,24 @@ export const getUser  = ({ user}) => user;
 const reducerName = 'user';
 const createActionName = (name) => `app/${reducerName}/${name}`;
 
-const LOGGED = createActionName('LOGGED');
-const LOGOUT = createActionName('LOGGOUT');
+const LOGIN = createActionName('LOGIN');
+const LOGOUT = createActionName('LOGOUT');
 
-export const logged = (payload) => ({ payload, type: LOGGED });
+export const login = (payload) => ({ payload, type: LOGIN });
 export const logout = (payload) => ({ payload, type: LOGOUT });
 
 export const reducer = (statePart = [], action = {}) => {
   switch (action.type) {
-    case LOGGED: {
+    case LOGIN: {
       return {
         ...statePart,
-        authenticated: true,
+        auth: true,
       };
     }
     case LOGOUT: {
       return {
         ...statePart,
-        authenticated: false,
+        auth: false,
       };
     }
     default:

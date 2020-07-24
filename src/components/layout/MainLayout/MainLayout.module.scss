@@ -1,11 +1,8 @@
 @import '../../../styles/settings.scss';
 
 .main {
-  margin: 0 auto;
-
-  padding: 60px 10%;
-  width: auto;
-  min-height: 900px;
+  padding: 140px 10% 0 5%;
+  min-height: 100vh;
   height: 100vh;
   background: url('./background.jpg') no-repeat;
   background-size: 100% 100%;

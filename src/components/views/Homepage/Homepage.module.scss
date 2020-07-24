@@ -1,4 +1,31 @@
 @import '../../../styles/settings.scss';
 
+.component {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .card {
+        padding: 80px 15px 20px 25px;
+        min-width: 40%;
+        max-width: 40%;
+        height: auto;
+        display: inline-block;
+       margin: 0;
+       background-image: url('./emptyPost.png');
+       background-repeat: no-repeat;
+       background-size: cover;
+
+       .title {
+         width: 100%;
+         font-size: 24px;
+         font-weight: bolder;
+         margin-bottom: 20px;
+         word-wrap: break-word;
+       }
+    }
+}
+
 // .root {
 // }
