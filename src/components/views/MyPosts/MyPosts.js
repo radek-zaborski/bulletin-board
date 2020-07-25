@@ -12,23 +12,18 @@ import { connect } from 'react-redux';
 import { getMyPosts } from '../../../redux/postsRedux.js';
 import { getUser } from '../../../redux/userRedux';
 
-
-
 import styles from './MyPosts.module.scss';
 
 const Component = ({ className, posts, user }) => (
   <div className={clsx(className, styles.component)}>
-
     <div className={styles.cards}>
       {posts.map((post) => (
         <div className={styles.card} key={post.id} variant="outlined">
           <div component={Link} to={`/post/${post.id}`}>
-
             <div>
               <Typography gutterBottom variant="h5" component="h2">
                 {post.title}
               </Typography>
-
             </div>
           </div>
         </div>
@@ -36,7 +31,6 @@ const Component = ({ className, posts, user }) => (
     </div>
     {user.auth && (
       <Button component={Link} className={styles.addNew} variant="contained" color="primary" to="/post/add">
-
         Add new
       </Button>
     )}
@@ -57,7 +51,6 @@ const mapStateToProps = (state) => ({
 const Container = connect(mapStateToProps)(Component);
 
 export {
-  // Component as MyPosts,
   Container as MyPosts,
   Component as MyPostsComponent,
 };

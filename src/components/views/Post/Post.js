@@ -26,12 +26,11 @@ const Component = ({ className, post, user, login, logout }) => {
       <div className={styles.date}>publicated: {post.date}<br/>, date of actualisation: {post.dateActualisation}</div>
     </div>
 
-    {user.auth ? (
-      <Button component={Link} className={styles.editPostButton} variant="contained" color="primary" to={`/post/${post.id}/edit`}>
+    {user.auth && (
+      <Button component={Link} className={styles.buttonEdit} variant="contained" color="primary" to={`/post/${post.id}/edit`}>
         Edit post
       </Button>
-      ) : ('')
-    }
+      )}
   </div>
   )
 };
@@ -44,7 +43,6 @@ Component.propTypes = {
   login: PropTypes.func,
   logout: PropTypes.func,
 };
-
 
 const mapStateToProps = (state, props) => ({
   posts: getAll(state),
@@ -60,7 +58,6 @@ const mapDispatchToProps = (dispatch) => ({
 const Container = connect(mapStateToProps)(Component);
 
 export {
-  // Component as Post,
   Container as Post,
   Component as PostComponent,
 };

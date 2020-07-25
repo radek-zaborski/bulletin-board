@@ -13,7 +13,6 @@ const Component = ({ className, posts, user, login, logout }) => {
   const authenticationHandler = (event) => {
     event.preventDefault();
     user.auth || user.admin ? logout(user) : login(user);
-
   };
 
   return (
@@ -27,16 +26,13 @@ const Component = ({ className, posts, user, login, logout }) => {
         </Link>
         ))}
 
-    {user.auth ? (
-
-            <Button component={Link} to="/post/add" variant="contained" className={styles.buttonLogin} color="primary">
+        {user.auth && (
+          <Button component={Link} to="/post/add" variant="contained" className={styles.buttonLogin} color="primary">
             New post
           </Button>
-
-
-        ) : ('')
-}
-  </div>
+            )
+        }
+    </div>
   </div>
   )
 };
@@ -61,7 +57,6 @@ const mapDispatchToProps = (dispatch) => ({
 const Container = connect(mapStateToProps)(Component);
 
 export {
-  // Component as Homepage,
   Container as Homepage,
   Component as HomepageComponent,
 };

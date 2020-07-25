@@ -4,7 +4,7 @@
   margin: 0 auto;
   width: 45vh;
   height: 600px;
-  background-image: url('./emptyPost.png');
+  background-image: url('../../../images/stickyNote.png');
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -26,5 +26,4 @@
     left: 50%;
     transform: translateX(-55%);
   }
-
 }

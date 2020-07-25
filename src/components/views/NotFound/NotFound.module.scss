@@ -1,9 +1,12 @@
 @import '../../../styles/settings.scss';
 
-img {
+.component {
 
-  width: 600px;
-  padding-left: 25vw;
+  width: 480px;
+  height: 500px;
+  margin: 0 auto;
+  background-image: url('../../../images/notFound.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-// .root {
-// }
+

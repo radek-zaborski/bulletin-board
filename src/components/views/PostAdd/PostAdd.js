@@ -60,9 +60,6 @@ class Component extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-
-    console.log('Submit!', this.state);
-
     this.props.addPost(this.state);
   };
 
@@ -134,7 +131,6 @@ const mapDispatchToProps = (dispatch) => ({
 const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  // Component as PostAdd,
   Container as PostAdd,
   Component as PostAddComponent,
 };

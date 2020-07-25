@@ -1,21 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
 import { NotFound } from '../NotFound/NotFound';
-
 import datePicker from 'date-and-time';
-
 import clsx from 'clsx';
-
 import { connect } from 'react-redux';
 import { getPost, editPost } from '../../../redux/postsRedux.js';
 import { getUser } from '../../../redux/userRedux.js';
-
 import styles from './PostEdit.module.scss';
+
 class Component extends React.Component {
+
   state = {
     id: this.props.post.id,
     title: this.props.post.title,
@@ -139,7 +135,6 @@ const mapDispatchToProps = (dispatch) => ({
 const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  // Component as PostEdit,
   Container as PostEdit,
   Component as PostEditComponent,
 };
