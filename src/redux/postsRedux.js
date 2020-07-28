@@ -8,7 +8,6 @@ export const getPost = ({ posts }, postId) => {
 export const getMyPosts = ({ posts, user }) => {
   const filtered = posts.data.filter((post) => post.userId === user.id);
   return filtered;
-  // return filtered.length ? filtered[0] : { error: true };
 };
 /* action name creator */
 const reducerName = 'posts';

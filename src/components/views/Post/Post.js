@@ -5,16 +5,12 @@ import clsx from 'clsx';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
 import { getAll, getPost} from '../../../redux/postsRedux.js';
-import { getUser, login, logout } from '../../../redux/userRedux.js';
+import { getUser } from '../../../redux/userRedux.js';
 
 import styles from './Post.module.scss';
 
-const Component = ({ className, post, user, login, logout }) => {
+const Component = ({ className, post, user}) => {
 
-  const authenticationHandler = (event) => {
-    event.preventDefault();
-    user.auth ? logout(user) : login(user);
-  };
 
   return (
   <div className={clsx(className, styles.component)}>
@@ -40,19 +36,13 @@ Component.propTypes = {
   posts: PropTypes.array,
   post: PropTypes.object,
   user: PropTypes.object,
-  login: PropTypes.func,
-  logout: PropTypes.func,
+
 };
 
 const mapStateToProps = (state, props) => ({
   posts: getAll(state),
   post: getPost(state, props.match.params.id),
   user: getUser(state),
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  login: (payload) => dispatch(login(payload)),
-  logout: (payload) => dispatch(logout(payload)),
 });
 
 const Container = connect(mapStateToProps)(Component);

@@ -10,10 +10,7 @@ import styles from './Homepage.module.scss';
 import Button from '@material-ui/core/Button';
 
 const Component = ({ className, posts, user, login, logout }) => {
-  const authenticationHandler = (event) => {
-    event.preventDefault();
-    user.auth || user.admin ? logout(user) : login(user);
-  };
+
 
   return (
   <div className={clsx(className, styles.component)}>
@@ -47,11 +44,6 @@ Component.propTypes = {
 const mapStateToProps = (state) => ({
   posts: getAll(state),
   user: getUser(state),
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  login: (payload) => dispatch(login(payload)),
-  logout: (payload) => dispatch(logout(payload)),
 });
 
 const Container = connect(mapStateToProps)(Component);
